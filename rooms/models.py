@@ -98,4 +98,4 @@ class Room(core_models.TimeStampedModel):
         all_ratings = 0
         for reviw in all_reviews:
             all_ratings += reviw.rating_average()
-        return all_ratings / len(all_reviews)
+        return round(all_ratings / len(all_reviews))
